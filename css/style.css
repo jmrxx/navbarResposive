@@ -1,0 +1,91 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* setting general */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* navbar */
+nav {
+  height: 50px;
+  background-color: #000;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#logo {
+  flex: 2;
+}
+
+/* menu */
+#menu {
+  filter: invert(1);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  padding: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  border-radius: 5%;
+  background-color: rgba(47, 21, 198, 0.704);
+}
+
+nav ul li a:focus {
+  border-bottom: 2px solid #fff;
+}
+
+/* media query for mobyle css  */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    position: initial;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #menu {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-100%);
+  }
+
+  nav {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  ul.active {
+    transition: transform 1s;
+    transform: translateX(0);
+  }
+}
